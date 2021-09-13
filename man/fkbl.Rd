@@ -14,9 +14,6 @@ fkbl(df, digi = 2, big_mark = TRUE, ...)
 \description{
 A wrapper function for kableExtra::kbl()
 }
-\examples{
-1+1
-}
 \keyword{fkbl()}
 \keyword{kable,}
 \keyword{kableExtra}

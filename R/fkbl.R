@@ -2,7 +2,6 @@
 #' @param df A data.frame to display
 #' @param digi The number of digits to show
 #' @export
-#' @examples 1+1
 #' @keywords kable, kableExtra
 #' fkbl()
 
