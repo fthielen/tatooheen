@@ -1,7 +1,7 @@
 #' A wrapper function for kableExtra::kbl()
 #' @param df A data.frame to display
 #' @param digi The number of digits to show
-#' @export
+#' @export fkbl
 
 fkbl <- function(df, digi = 2, big_mark = TRUE, ...){
 
