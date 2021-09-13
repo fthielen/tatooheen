@@ -2,15 +2,20 @@
 % Please edit documentation in R/fkbl.R
 \name{fkbl}
 \alias{fkbl}
-\title{A wrapper function for kableExtra::kbl}
+\title{A wrapper function for kableExtra::kbl()}
 \usage{
 fkbl(df, digi = 2, big_mark = TRUE, ...)
 }
 \arguments{
-\item{Test}{foo}
+\item{df}{A data.frame to display}
+
+\item{digi}{The number of digits to show}
 }
 \description{
-A wrapper function for kableExtra::kbl
+A wrapper function for kableExtra::kbl()
+}
+\examples{
+1+1
 }
 \keyword{fkbl()}
 \keyword{kable,}
