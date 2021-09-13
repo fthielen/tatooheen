@@ -1,6 +1,8 @@
 #' A wrapper function for kableExtra::kbl()
 #' @param df A data.frame to display
-#' @param digi The number of digits to show
+#' @param digi The number of digits to show in printed table.
+#' @param big_mark Set to control if big marks should be used (e.g. 21,000). Be aware that this also applies for years (i.e. 2,021 instead of 2021). To avaoid the latter convert to text with `as.character()` first.
+#' @param ... Further arguments for kableExtra::kbl()
 #' @export fkbl
 
 fkbl <- function(df, digi = 2, big_mark = TRUE, ...){
