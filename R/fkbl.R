@@ -2,10 +2,13 @@
 #' @param df A data.frame to display
 #' @param digi The number of digits to show
 #' @export
-#' @keywords kable, kableExtra
 #' fkbl()
 
 fkbl <- function(df, digi = 2, big_mark = TRUE, ...){
+
+        require("dplyr")
+        require("kableExtra")
+
         df %>%
                 kableExtra::kbl(
                         digits = digi,
