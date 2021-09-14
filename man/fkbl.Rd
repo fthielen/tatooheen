@@ -9,7 +9,11 @@ fkbl(df, digi = 2, big_mark = TRUE, ...)
 \arguments{
 \item{df}{A data.frame to display}
 
-\item{digi}{The number of digits to show}
+\item{digi}{The number of digits to show in printed table.}
+
+\item{big_mark}{Set to control if big marks should be used (e.g. 21,000). Be aware that this also applies for years (i.e. 2,021 instead of 2021). To avaoid the latter convert to text with \code{as.character()} first.}
+
+\item{...}{Further arguments for kableExtra::kbl()}
 }
 \description{
 A wrapper function for kableExtra::kbl()
