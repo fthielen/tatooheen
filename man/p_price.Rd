@@ -4,12 +4,16 @@
 \alias{p_price}
 \title{A function to write pretty prices in \code{bookdown} reports}
 \usage{
-p_price(x, currency = "EUR")
+p_price(x, digi = 2, currency = "EUR", ...)
 }
 \arguments{
 \item{x}{A number to be printed}
 
+\item{digi}{Number of digits}
+
 \item{currency}{The name of the currency}
+
+\item{...}{Extra arguments for \code{formatC()}}
 }
 \description{
 A function to write pretty prices in \code{bookdown} reports

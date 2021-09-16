@@ -6,8 +6,8 @@
 #' @keywords CADTH
 #' @export fill_create_tx_schedule
 
-fill_create_tx_schedule <- function(regimen_name = "CarDex",
-                                    regimen_phase = "I",
+fill_create_tx_schedule <- function(regimen_name,
+                                    regimen_phase,
                                     df = df_tx_regimen,
                                     cyc_max = 100){
 
@@ -50,19 +50,29 @@ fill_create_tx_schedule <- function(regimen_name = "CarDex",
                 pull
 
         # Fill
+        # create_tx_schedule(cyc_dur_d = df$cyc_dur,
+        #                    cyc_n = ifelse(is.na(df$max_cyc), cyc_max, df$max_cyc),
+        #                    tx1_d = if(
+        #                            !is.na(tx1_days)) as.numeric(unlist(strsplit(tx1_days, ","))),
+        #                    tx2_d = if(
+        #                            !is.na(tx2_days)) as.numeric(unlist(strsplit(tx2_days, ","))),
+        #                    tx3_d = if(
+        #                            !is.na(tx3_days)) as.numeric(unlist(strsplit(tx3_days, ","))),
+        #                    tx_names = tx_names,
+        #                    tx4_d = if(
+        #                            !is.na(tx4_days)) as.numeric(unlist(strsplit(tx4_days, ","))),
+        #                    tx5_d = if(
+        #                            !is.na(tx5_days)) as.numeric(unlist(strsplit(tx5_days, ","))),
+        #
+        # )
+
         create_tx_schedule(cyc_dur_d = df$cyc_dur,
                            cyc_n = ifelse(is.na(df$max_cyc), cyc_max, df$max_cyc),
-                           tx1_d = if(
-                                   !is.na(tx1_days)) as.numeric(unlist(strsplit(tx1_days, ","))),
-                           tx2_d = if(
-                                   !is.na(tx2_days)) as.numeric(unlist(strsplit(tx2_days, ","))),
-                           tx3_d = if(
-                                   !is.na(tx3_days)) as.numeric(unlist(strsplit(tx3_days, ","))),
                            tx_names = tx_names,
-                           tx4_d = if(
-                                   !is.na(tx4_days)) as.numeric(unlist(strsplit(tx4_days, ","))),
-                           tx5_d = if(
-                                   !is.na(tx5_days)) as.numeric(unlist(strsplit(tx5_days, ","))),
-
-        )
+                           phase_n = paste("Phase", regimen_phase),
+                           tx1_d = as.numeric(unlist(strsplit(tx1_days, ","))),
+                           tx2_d = as.numeric(unlist(strsplit(tx2_days, ","))),
+                           tx3_d = as.numeric(unlist(strsplit(tx3_days, ","))),
+                           tx4_d = as.numeric(unlist(strsplit(tx4_days, ","))),
+                           tx5_d = as.numeric(unlist(strsplit(tx5_days, ","))),)
 }
