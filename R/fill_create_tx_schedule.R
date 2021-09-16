@@ -74,5 +74,5 @@ fill_create_tx_schedule <- function(regimen_name,
                            tx2_d = as.numeric(unlist(strsplit(tx2_days, ","))),
                            tx3_d = as.numeric(unlist(strsplit(tx3_days, ","))),
                            tx4_d = as.numeric(unlist(strsplit(tx4_days, ","))),
-                           tx5_d = as.numeric(unlist(strsplit(tx5_days, ","))),)
+                           tx5_d = as.numeric(unlist(strsplit(tx5_days, ","))))
 }
