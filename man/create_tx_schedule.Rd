@@ -30,3 +30,4 @@ create_tx_schedule(
 \description{
 Create a drug treatment schedule data.frame
 }
+\keyword{CADTH}

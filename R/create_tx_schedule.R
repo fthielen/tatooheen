@@ -4,6 +4,7 @@
 #' @param tx.._d Days of cycle at which drug is administered (up to 5 drugs can be added)
 #' @param tx_names A character vector with the respective treatment names
 #' @param phase_n The phase if treatment changes between different phases and more than one phase is needed.
+#' @keywords CADTH
 #' @export create_tx_schedule
 
 create_tx_schedule <- function(cyc_dur_d,
