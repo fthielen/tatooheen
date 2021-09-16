@@ -31,23 +31,23 @@ fill_create_tx_schedule <- function(regimen_name,
 
         tx1_days <-  df %>%
                 select(days_1) %>%
-                pull
+                pull %>% as.character()
 
         tx2_days <-  df %>%
                 select(days_2) %>%
-                pull
+                pull %>% as.character()
 
         tx3_days <-  df %>%
                 select(days_3) %>%
-                pull
+                pull %>% as.character()
 
         tx4_days <-  df %>%
                 select(days_4) %>%
-                pull
+                pull %>% as.character()
 
         tx5_days <-  df %>%
                 select(days_5) %>%
-                pull
+                pull %>% as.character()
 
         # Fill
         # create_tx_schedule(cyc_dur_d = df$cyc_dur,
