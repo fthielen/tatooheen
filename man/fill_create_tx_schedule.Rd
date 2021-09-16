@@ -25,7 +25,7 @@ fill_create_tx_schedule(
 
 \item{df}{A data.frame in the form of \code{tx_regimens.xlsx}}
 
-\item{cyc_max}{The maximum number of cycles when no cycle duration is given (i.e. until progression)}
+\item{cyc_max}{The maximum number of cycles when no cycle duration is given (i.e. until progression in some instances)}
 
 \item{tx_schedule_ph1}{A treatment schedule for phase I}
 

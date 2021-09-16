@@ -2,7 +2,7 @@
 #' @param regimen_name The regimen name for which to fill `tatooheen::create_tx_schedule()`
 #' @param regimen_phase The regimen phase for which to fill `tatooheen::create_tx_schedule()`
 #' @param df A data.frame in the form of `tx_regimens.xlsx`
-#' @param cyc_max The maximum number of cycles when no cycle duration is given (i.e. until progression)
+#' @param cyc_max The maximum number of cycles when no cycle duration is given (i.e. until progression in some instances)
 #' @keywords CADTH
 #' @export fill_create_tx_schedule
 
