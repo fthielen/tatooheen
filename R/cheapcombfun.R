@@ -5,7 +5,7 @@
 #' @param only_total If `TRUE`, only display the total costs. If `FALSE`, return all information.
 #' @param vial_share If `TRUE`, vial share is allowed.
 #' @keywords CADTH
-#' @export tx_schedule_plot
+#' @export CheapCombFun
 
 
 CheapCombFun <- function(target,
