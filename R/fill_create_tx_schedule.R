@@ -1,11 +1,12 @@
-#' A wrapper function for `tatooheen::create_tx_schedule()` for pre-specified `tx_regimens.xlsx` tables
+#' A wrapper function for `tatooheen::create_tx_schedule()`
+#' @description A wrapper function for `tatooheen::create_tx_schedule()` for pre-specified `tx_regimens.xlsx` tables that need to be provided.
 #' @param regimen_name The regimen name for which to fill `tatooheen::create_tx_schedule()`
 #' @param regimen_phase The regimen phase for which to fill `tatooheen::create_tx_schedule()`
 #' @param df A data.frame in the form of `tx_regimens.xlsx`
 #' @param cyc_max The maximum number of cycles when no cycle duration is given (i.e. until progression in some instances)
-#' @export fill_create_tx_schedule1
+#' @export
 
-fill_create_tx_schedule1 <- function(regimen_name,
+fill_create_tx_schedule <- function(regimen_name,
                                     regimen_phase,
                                     df = df_tx_regimen,
                                     cyc_max = 100){
