@@ -42,6 +42,9 @@ CheapCombFun <- function(target,
                                      target_mg,
                                      ceiling(target_mg / min(possible_mg)) * min(possible_mg))
 
+                # Stop if target can never be reached with total_max
+                if(new_target / max(possible_mg) > total_max) stop("Target cannot be reached with total_max.")
+
                 # Define maximum of combinations based on the combining the smallest unit to reach target
                 max_combs <- min(new_target / min(possible_mg), total_max)
 
