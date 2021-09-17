@@ -7,8 +7,11 @@
 #'
 
 p_price <- function(x, digi = 2, currency = "EUR", ...){
-        paste(formatC(x,
+
+        num <- formatC(round(x, digits = digi),
                   big.mark = ",",
                   format = "f",
-                  digits = digi, ...), currency)
+                  digits = digi, ...)
+
+        paste(num, currency)
 }
