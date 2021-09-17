@@ -4,7 +4,13 @@
 \alias{join_tx_schedule}
 \title{Join phases created with \code{tatooheen::create_tx_schedulde} or \code{tatooheen::fill_create_tx_schedulde}}
 \usage{
-join_tx_schedule(tx_schedule_ph1, tx_schedule_ph2, tx_schedule_ph3 = NULL)
+join_tx_schedule(
+  tx_schedule_ph1,
+  tx_schedule_ph2,
+  tx_schedule_ph3 = NULL,
+  tx_schedule_ph4 = NULL,
+  tx_schedule_ph5 = NULL
+)
 }
 \arguments{
 \item{tx_schedule_ph1}{A treatment schedule for phase I}
@@ -12,6 +18,10 @@ join_tx_schedule(tx_schedule_ph1, tx_schedule_ph2, tx_schedule_ph3 = NULL)
 \item{tx_schedule_ph2}{A treatment schedule for phase II}
 
 \item{tx_schedule_ph3}{A treatment schedule for phase III}
+
+\item{tx_schedule_ph4}{A treatment schedule for phase IV}
+
+\item{tx_schedule_ph5}{A treatment schedule for phase V}
 }
 \description{
 Join phases created with \code{tatooheen::create_tx_schedulde} or \code{tatooheen::fill_create_tx_schedulde}
