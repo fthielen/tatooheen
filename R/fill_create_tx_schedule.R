@@ -11,6 +11,8 @@ fill_create_tx_schedule <- function(regimen_name,
                                     df = df_tx_regimen,
                                     cyc_max = 100){
 
+        if(!regimen_name %in% df_tx_regimen$regimen) stop("Regimen name provided not in df.")
+
         # Preparation
         df <- df %>%
                 filter(regimen %in% regimen_name,
