@@ -2,6 +2,7 @@
 
 export(CheapCombFun)
 export(create_tx_schedule)
+export(d2m)
 export(fill_create_tx_schedule)
 export(fkbl)
 export(fkbl_style)
