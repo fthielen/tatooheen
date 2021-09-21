@@ -1,7 +1,7 @@
 #' Fit parametric survival functions
 #' @description A function to fit several parametric survival functions. This function is adapted from `daarthools::fit.fun()`
 #' @param data The data set
-#' @param formale The formula with or without co-variates (to be specified with `as.formula()`)
+#' @param formula The formula with or without co-variates (to be specified with `as.formula()`)
 #' @export
 
 
