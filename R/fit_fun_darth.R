@@ -13,7 +13,7 @@ fit_fun <- function(data,
         KM.fit <- survfit(
                 as.formula(
                         paste(
-                                c(as.character(surv_formula)[c(2, 1)],
+                                c(as.character(formula)[c(2, 1)],
                                   "1"),
                                 collapse = " ")
                         ),
