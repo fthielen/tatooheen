@@ -20,28 +20,28 @@ fit_fun <- function(data,
                 data = data)
 
         # Fit parametric
-        fit.gengamma  <- flexsurvreg(form,
+        fit.gengamma  <- flexsurvreg(formula,
                                      data = data,
                                      dist = "gengamma") # fit model with gamma distribution
-        fit.genf  <- flexsurvreg(form,
+        fit.genf  <- flexsurvreg(formula,
                                  data = data,
                                  dist = "genf") # fit model with Generalized F (stable) distribution
-        fit.weib   <- flexsurvreg(form,
+        fit.weib   <- flexsurvreg(formula,
                                   data = data,
                                   dist = "weibull")       # fit model with Weibull distribution
-        fit.gamma  <- flexsurvreg(form,
+        fit.gamma  <- flexsurvreg(formula,
                                   data = data,
                                   dist = "gamma")       # fit model with gamma distribution
-        fit.exp    <- flexsurvreg(form,
+        fit.exp    <- flexsurvreg(formula,
                                   data = data,
                                   dist = "exp")       # fit model with exponential distribution
-        fit.llogis <- flexsurvreg(form,
+        fit.llogis <- flexsurvreg(formula,
                                   data = data,
                                   dist = "llogis")       # fit model with loglogistic distribution
-        fit.lnorm  <- flexsurvreg(form,
+        fit.lnorm  <- flexsurvreg(formula,
                                   data = data,
                                   dist = "lnorm")       # fit model with lognormal distribution
-        fit.gompertz  <- flexsurvreg(form,
+        fit.gompertz  <- flexsurvreg(formula,
                                      data = data,
                                      dist = "gompertz") # fit model with gompertz distribution
 
