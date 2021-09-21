@@ -9,7 +9,7 @@ fit_fun(data, formula)
 \arguments{
 \item{data}{The data set}
 
-\item{formale}{The formula with or without co-variates (to be specified with \code{as.formula()})}
+\item{formula}{The formula with or without co-variates (to be specified with \code{as.formula()})}
 }
 \description{
 A function to fit several parametric survival functions. This function is adapted from \code{daarthools::fit.fun()}
