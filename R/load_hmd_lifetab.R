@@ -15,6 +15,7 @@ load_hmd_lifetab <- function(path_to_file = "data/hmd/",
                              hmd_password = Sys.getenv("HMD_PW")){
         if(!file.exists(paste0(here(path_to_file),
                                substr(Sys.Date(), 1, 4),
+                               country,
                                "_hmd_male.csv")) | force_update){
                 death.prop.male <- HMDHFDplus::readHMDweb(CNTRY = country,
                                                           item = "mltper_1x1",
@@ -22,11 +23,13 @@ load_hmd_lifetab <- function(path_to_file = "data/hmd/",
                                                           password = Shmd_password);
                 write.csv(death.prop.male, file = paste0(here(path_to_file),
                                                          substr(Sys.Date(), 1, 4),
+                                                         country,
                                                          "_hmd_male.csv"))
         }
 
         if(!file.exists(paste0(here(path_to_file),
                                substr(Sys.Date(), 1, 4),
+                               country,
                                "_hmd_female.csv"))){
                 death.prop.male <- HMDHFDplus::readHMDweb(CNTRY = country,
                                                           item = "fltper_1x1",
@@ -34,6 +37,7 @@ load_hmd_lifetab <- function(path_to_file = "data/hmd/",
                                                           password = hmd_password)
                 write.csv(death.prop.male, paste0(here(path_to_file),
                                                   substr(Sys.Date(), 1, 4),
+                                                  country,
                                                   "_hmd_female.csv"))
         }
 
