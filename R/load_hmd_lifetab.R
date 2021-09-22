@@ -20,7 +20,7 @@ load_hmd_lifetab <- function(path_to_file = "data/hmd/",
                 death.prop.male <- HMDHFDplus::readHMDweb(CNTRY = country,
                                                           item = "mltper_1x1",
                                                           username = hmd_user,
-                                                          password = Shmd_password);
+                                                          password = hmd_password);
                 write.csv(death.prop.male, file = paste0(here(path_to_file),
                                                          substr(Sys.Date(), 1, 4),
                                                          country,
