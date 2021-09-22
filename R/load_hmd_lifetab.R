@@ -13,6 +13,8 @@ load_hmd_lifetab <- function(path_to_file = "data/hmd/",
                              country = "NLD",
                              hmd_user = Sys.getenv("HMD_USER"),
                              hmd_password = Sys.getenv("HMD_PW")){
+        require("here")
+
         if(!file.exists(paste0(here(path_to_file),
                                substr(Sys.Date(), 1, 4),
                                country,
