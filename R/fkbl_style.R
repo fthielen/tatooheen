@@ -3,6 +3,7 @@
 #' @param scale If `TRUE`, table will be scaled down
 #' @param boots_opts Standard bootstrap options for HTML. Can be overwritten.
 #' @param latx_opts Standard options for PDF. Can be overwritten.
+#' @param ... Further arguments to `kableExtra::kable_styling()`
 #' @export fkbl_style
 
 fkbl_style <- function(fkbl, scale = FALSE,

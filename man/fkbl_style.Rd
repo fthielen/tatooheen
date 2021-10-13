@@ -20,6 +20,8 @@ fkbl_style(
 \item{boots_opts}{Standard bootstrap options for HTML. Can be overwritten.}
 
 \item{latx_opts}{Standard options for PDF. Can be overwritten.}
+
+\item{...}{Further arguments to \code{kableExtra::kable_styling()}}
 }
 \description{
 A wrapper function for kableExtra::kable_styling() to be used after tatooheen::fkbl()
