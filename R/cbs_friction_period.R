@@ -25,7 +25,7 @@ cbs_friction_period <- function(years,
 
         # Set path
         path1 <- folderpath
-        path2 <- paste0(folderpath, "data_fric_per.Rds")
+        path2 <- paste0(folderpath, "/data_fric_per.Rds")
 
         # Create directory if not existing
         if (download & !dir.exists(path1))
