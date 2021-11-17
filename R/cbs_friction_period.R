@@ -29,7 +29,7 @@ cbs_friction_period <- function(years,
 
         # Create directory if not existing
         if (download & !dir.exists(path1))
-                dir.create(path1, recursive = TRUE)
+                dir.create(path2, recursive = TRUE)
 
         # Download data
         if (download) {
