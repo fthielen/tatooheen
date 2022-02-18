@@ -10,6 +10,10 @@ fkbl <- function(df, digi = 2, big_mark = TRUE, ...){
         require("dplyr")
         require("kableExtra")
 
+        if(knitr::pandoc_to("docx")) {
+                df %>% flextable::flextable(col_keys = col.names)
+        } else {
+
         df %>%
                 kableExtra::kbl(
                         digits = digi,
@@ -21,4 +25,5 @@ fkbl <- function(df, digi = 2, big_mark = TRUE, ...){
                                         ",",
                                         "")),
                         ...)
+                }
 }
