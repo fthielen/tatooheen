@@ -12,7 +12,7 @@ fkbl <- function(df, digi = 2, big_mark = TRUE,
         require("kableExtra")
 
         if(knitr::pandoc_to("docx")) {
-                df %>% flextable::flextable(col_keys = col.names)
+                df %>% flextable::flextable()
         } else {
 
         df %>%
