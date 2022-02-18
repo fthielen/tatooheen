@@ -11,6 +11,10 @@ fkbl_style <- function(fkbl, scale = FALSE,
                        latx_opts = c("striped", "HOLD_position"),
                        ...) {
 
+        if(knitr::pandoc_to("docx")) {
+                fkbl
+        } else {
+
         fkbl %>%
                 kableExtra::kable_styling(
                         # HTML output
@@ -27,4 +31,5 @@ fkbl_style <- function(fkbl, scale = FALSE,
                         ...
                 ) %>%
                 scroll_box(., width = "100%", box_css = "border: 0px;")
+                }
 }
