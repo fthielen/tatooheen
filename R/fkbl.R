@@ -5,17 +5,19 @@
 #' @param ... Further arguments for kableExtra::kbl()
 #' @export fkbl
 
-fkbl <- function(df, digi = 2, big_mark = TRUE, ...){
+fkbl <- function(df, digi = 2, big_mark = TRUE,
+                 col.names = names(df), ...){
 
         require("dplyr")
         require("kableExtra")
 
         if(knitr::pandoc_to("docx")) {
-                df %>% flextable::flextable()
+                df %>% flextable::flextable(col_keys = col.names)
         } else {
 
         df %>%
                 kableExtra::kbl(
+                        col.names = col.names,
                         digits = digi,
                         booktabs = TRUE, # this is for erasing the single lines in tables
                         linesep = "", # no distance per 5 lines
