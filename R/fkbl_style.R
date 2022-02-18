@@ -11,7 +11,7 @@ fkbl_style <- function(fkbl, scale = FALSE,
                        latx_opts = c("striped", "HOLD_position"),
                        ...) {
 
-        requie("kableExtra")
+        require("kableExtra")
 
         if(knitr::pandoc_to("docx")) {
                 fkbl
