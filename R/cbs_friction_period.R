@@ -28,7 +28,7 @@ cbs_friction_period <- function(years,
         path2 <- paste0(folderpath, "/data_fric_per.Rds")
 
         # Create directory if not existing
-        if (download & !dir.exists(path1))
+        if (download & is.null(folderpath))
                 dir.create(path1, recursive = TRUE)
 
         # Download data
@@ -79,8 +79,8 @@ cbs_friction_period <- function(years,
                         Friction_period_wks
                 ) %>%
                 filter(Year %in% years) %>%
-                rename(Filled_vacancies = 2,
-                       Open_vacancies = 3) %>%
+                rename(Filled_vacancies = "VervuldeVacatures_3",
+                       Open_vacancies = "OpenstaandeVacatures_1") %>%
                 data.frame()
         res
 }
