@@ -12,7 +12,14 @@ fkbl <- function(df, digi = 2, big_mark = TRUE,
         require("kableExtra")
 
         if(knitr::pandoc_to("docx")) {
-                df %>% flextable::flextable()
+                df %>%
+                        flextable::flextable() %>%
+                        flextable::colformat_double(x = .,
+                                                    big.mark = ifelse(
+                                                            big_mark,
+                                                            ",",
+                                                            ""),
+                                                    digits = digi)
         } else {
 
         df %>%
