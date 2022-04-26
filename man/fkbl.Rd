@@ -4,7 +4,7 @@
 \alias{fkbl}
 \title{A wrapper function for kableExtra::kbl()}
 \usage{
-fkbl(df, digi = 2, big_mark = TRUE, ...)
+fkbl(df, digi = 2, big_mark = TRUE, col.names = names(df), ...)
 }
 \arguments{
 \item{df}{A data.frame to display}
