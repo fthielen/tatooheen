@@ -26,4 +26,14 @@ CheapCombFun(
 \description{
 A function to calculate the cheapest drug combination given a data.frame with combination and prices
 }
+\examples{
+# Data frame of possible doses and prices per dose
+df_combi <- data.frame(drug = rep(LETTERS[1], 3),
+                       dose = c(10, 20, 50),
+                       price_dose = c(11.39, 20, 56.96))
+# Return only total costs of cheapest option
+tatooheen::CheapCombFun(target = 92.5, combi = df_combi, only_total = T)
+# Return more information as a list
+res <- tatooheen::CheapCombFun(target = 92.5, combi = df_combi, only_total = F)
+}
 \keyword{CADTH}
