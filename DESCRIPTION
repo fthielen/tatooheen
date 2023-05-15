@@ -19,6 +19,7 @@ BugReports: https://github.com/fthielen/tatooheen/issues
 Imports:
     tidyverse,
     kableExtra,
+    flextable,
     RcppAlgos
 Suggests: 
     testthat (>= 3.0.0)
