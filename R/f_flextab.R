@@ -5,8 +5,8 @@
 #' @param col_names New column names. If left empty (NULL) names will be taken from `df`.
 #' @param f_format_dbl If TRUE (default) numbers in table will be formatted.
 #' @param f_digi Number of digits when `f_format_dbl` is TRUE.
-#' @param flex_layout Used for
-#' @export f_flextab Used for `flextable::set_table_properties`. 'autofit' or 'fixed' algorithm. Default to 'autofit'.
+#' @param flex_layout Used for `flextable::set_table_properties`. 'autofit' or 'fixed' algorithm. Default to 'autofit'.
+#' @export f_flextab
 
 f_flextab <- function(df,
                       cpt = "",

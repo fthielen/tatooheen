@@ -13,7 +13,7 @@ f_turner_live <- function(orig_val = 200000,
 
         # Tests -------------------------------------------------------------------
         output_currency_opts <- c("I$", "US$")
-        conv_type_opts <- c("tradable", "non-tradable")
+        conv_type_opts <- c("tradable", "non-tradable", "cpi")
         exchange_period_opts <- c("start", "end", "year_average")
 
         # Currency conversion ------------------------------------------------------
@@ -72,6 +72,8 @@ f_turner_live <- function(orig_val = 200000,
         }
 
 
+
+
         df_to_usd <- priceR::historical_exchange_rates(
                 from = name_currency,
                 to = "USD",
@@ -86,7 +88,8 @@ f_turner_live <- function(orig_val = 200000,
         # Inflation ---------------------------------------------------------------------
         use_country <- switch (conv_type,
                                "tradable" = "USA",
-                               "non-tradable" = from_country)
+                               "non-tradable" = from_country,
+                               "cpi" = from_country)
 
         df_cpi <- wb_data(indicator = "FP.CPI.TOTL",
                           country = use_country,
