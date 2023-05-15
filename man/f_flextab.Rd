@@ -27,7 +27,7 @@ f_flextab(
 
 \item{f_digi}{Number of digits when \code{f_format_dbl} is TRUE.}
 
-\item{flex_layout}{Used for}
+\item{flex_layout}{Used for \code{flextable::set_table_properties}. 'autofit' or 'fixed' algorithm. Default to 'autofit'.}
 }
 \description{
 A wrapper function for flextable related funtctions
