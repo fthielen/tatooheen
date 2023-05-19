@@ -16,7 +16,7 @@ f_flextab <- function(df,
                       f_digi = 2,
                       flex_layout = "autofit"){
 
-        require("felxtable")
+        require("flextable")
 
         df %>%
                 flextable::flextable() %>%
