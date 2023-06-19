@@ -8,7 +8,7 @@ cbs_friction_period(
   years,
   industry = "T001081",
   folderpath = NULL,
-  download = T,
+  type = "download",
   yeardays = 365.25,
   ...
 )
@@ -16,13 +16,13 @@ cbs_friction_period(
 \arguments{
 \item{years}{Years for which friction data should be kept. Usually only one year, but several are possible (e.g. 2014:2020)}
 
-\item{industry}{Industry for which friction period should be calculated. Usually "All economic acvitivies" = "T001081" (default). Check downloaded data with cbsodataR::cbs_add_label_columns() for an other industries.}
+\item{industry}{Industry for which friction period should be calculated. Usually "All economic activities" = "T001081" (default). Check downloaded data with cbsodataR::cbs_add_label_columns() for an other industries.}
 
-\item{folderpath}{The path to were the data should be dowloaded. Best specified with here::here().}
+\item{folderpath}{The path to were the data should be downloaded. Best specified with here::here().}
 
-\item{download}{Whether data should be downloaded and stored. Default is \code{TRUE}. If \code{FALSE}, data will not be stored but need to be fetched every time.}
+\item{type}{Whether data should be downloaded and stored ("download"), only shown ("show") or read from previously downloaded ("read"). Default is "download".}
 
-\item{yeardays}{Time in days to convert years to days. Default is 365.25 days for one year.}
+\item{yeardays}{Number of days used to convert years to days. Default is 365.25 days for one year.}
 }
 \description{
 A wrapper function to download CBS data for the friction period.
