@@ -7,7 +7,7 @@
 #' @param i_interest_rt i: rentepercentage; interest rate
 #' @keywords Generic, costs equipment
 
-#' @export cbs_friction_period
+#' @export f_depreciation_interest
 
 f_depreciation_interest <- function(
                 v_replace_val,
