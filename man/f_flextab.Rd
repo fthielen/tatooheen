@@ -21,7 +21,7 @@ f_flextab(
 
 \item{tb_lbl}{A table label used for bookdown documents. Default is the chunk label. If no chunk label provided add own here.}
 
-\item{col_names}{New column names. If left empty (NULL) names will be taken from \code{df}.}
+\item{col_names}{New column names. If left empty (NULL) names will be taken from \code{df}. If a data.frame is provided, the first column needs to hold the names as in the data and the second column the labels.}
 
 \item{f_format_dbl}{If TRUE (default) numbers in table will be formatted.}
 

@@ -2,7 +2,7 @@
 #' @param df A data.frame of tibble
 #' @param cpt The table caption.
 #' @param tb_lbl A table label used for bookdown documents. Default is the chunk label. If no chunk label provided add own here.
-#' @param col_names New column names. If left empty (NULL) names will be taken from `df`.
+#' @param col_names New column names. If left empty (NULL) names will be taken from `df`. If a data.frame is provided, the first column needs to hold the names as in the data and the second column the labels.
 #' @param f_format_dbl If TRUE (default) numbers in table will be formatted.
 #' @param f_digi Number of digits when `f_format_dbl` is TRUE.
 #' @param flex_layout Used for `flextable::set_table_properties`. 'autofit' or 'fixed' algorithm. Default to 'autofit'.
@@ -18,9 +18,15 @@ f_flextab <- function(df,
 
         require("flextable")
 
+        if (inherits(x = col_names, what = "data.frame")) {
+                col_names <- setNames(
+                        col_names[, 2],
+                        col_names[, 1])
+        }
+
         df %>%
                 flextable::flextable() %>%
-                {if (!is.null(col_names)) flextable::set_header_labels(values = col_names) else .} %>%
+                {if (!is.null(col_names)) flextable::set_header_labels(., values = col_names) else .} %>%
                 {if (f_format_dbl) flextable::colformat_double(x = ., digits = f_digi) else .} %>%
                 flextable::set_caption(caption = cpt,
                                        autonum = officer::run_autonum(seq_id = "tab",
