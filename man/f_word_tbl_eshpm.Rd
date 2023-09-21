@@ -2,7 +2,7 @@
 % Please edit documentation in R/f_word_tbl_eshpm.R
 \name{f_word_tbl_eshpm}
 \alias{f_word_tbl_eshpm}
-\title{A wrapper function for flextable related funtctions}
+\title{A wrapper function for flextable related functions}
 \usage{
 f_word_tbl_eshpm(
   df,
@@ -30,5 +30,5 @@ f_word_tbl_eshpm(
 \item{flex_layout}{Used for \code{flextable::set_table_properties}. 'autofit' or 'fixed' algorithm. Default to 'autofit'.}
 }
 \description{
-A wrapper function for flextable related funtctions
+A wrapper function for flextable related functions
 }

@@ -1,4 +1,4 @@
-#' A wrapper function for flextable related funtctions
+#' A wrapper function for flextable related functions
 #' @param df A data.frame of tibble
 #' @param cpt The table caption.
 #' @param tb_lbl A table label used for bookdown documents. Default is the chunk label. If no chunk label provided add own here.
