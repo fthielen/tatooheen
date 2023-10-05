@@ -67,7 +67,7 @@ CheapCombFun <- function(target,
                 all_combs <- comboGeneral(c(0, possible_mg), max_combs, TRUE)
 
                 # Only keep colums that reach target
-                reduced_combs <- all_combs[rowSums(all_combs) == new_target, , drop = FALSE] # to prevent from vectorising if only one combination is possible
+                reduced_combs <- all_combs[rowSums(all_combs) >= new_target, , drop = FALSE] # to prevent from vectorising if only one combination is possible
 
 
                 # Keep only unique combinations
