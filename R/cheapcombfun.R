@@ -48,15 +48,15 @@ CheapCombFun <- function(target,
 
                 # Define new target if needed
 
-                new_target <- ifelse(target_mg %% min(possible_mg) == 0,
+                new_target <- ifelse(any(target_mg / possible_mg <= 1),
                                      target_mg,
-                                     ceiling(target_mg / min(possible_mg)) * min(possible_mg))
+                                     min(ceiling(target_mg / possible_mg) * possible_mg))
 
                 # Stop if target can never be reached with total_max
                 if(new_target / max(possible_mg) > total_max) stop("Target cannot be reached with total_max.")
 
                 # Define maximum of combinations based on the combining the smallest unit to reach target
-                max_combs <- min(new_target / min(possible_mg), total_max)
+                max_combs <- ceiling(min(new_target / min(possible_mg), total_max))
 
                 try(if(max_combs %% 1 !=0) stop("AllCombFunFast: Minimum combination is not multiple of target. Check if target can be reached without decimals."))
 
